@@ -150,17 +150,6 @@
   </div></div>
 </div></section>
 
-<!-- EMAIL CAPTURE -->
-<section style="padding-top:0"><div class="wrap"><div class="capture">
-  <h2>Be first when Routio drops.</h2>
-  <p>Launching on the App Store now. Drop your email and we'll send you the link the moment it's live — plus an early-driver discount.</p>
-  <form class="capform" id="capform">
-    <input type="email" name="email" placeholder="you@email.com" required aria-label="Email">
-    <button type="submit">Notify me</button>
-  </form>
-  <div class="capmsg" id="capmsg"></div>
-</div></div></section>
-
 <!-- FAQ -->
 <section style="background:var(--bg-soft)"><div class="wrap">
   <div class="sec-head"><div class="kick">Questions</div><h2>Everything you might be wondering.</h2></div>
@@ -189,17 +178,5 @@
   <p class="disclaimer">Routio is an independent app and is not affiliated with, endorsed by, or sponsored by MileIQ, Everlance, Intuit/QuickBooks, or Apple. Mentioned product names and prices are based on publicly available information and belong to their respective owners. Deduction figures are illustrative; consult a tax professional for advice specific to your situation. © 2026 Routio.</p>
 </div></footer>
 
-<script>
-document.getElementById('capform').addEventListener('submit', async function(e){
-  e.preventDefault();
-  var email=this.email.value, msg=document.getElementById('capmsg');
-  msg.style.color='#fff'; msg.textContent='Adding you…';
-  try{
-    var r=await fetch('/api/notify',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({email:email})});
-    if(r.ok){ msg.textContent="🎉 You're on the list! Check your inbox at launch."; this.reset(); }
-    else { msg.textContent='Hmm, try again in a sec.'; }
-  }catch(err){ msg.textContent='Network hiccup — try again.'; }
-});
-</script>
 </body>
 </html>

@@ -132,16 +132,6 @@ table.compare tr:last-child td{border-bottom:0}
 .pcard .flist{display:inline-block;text-align:left;margin:18px 0 22px}
 .pnote{font-size:13px;color:var(--slate-l);margin-top:12px}
 
-/* email capture */
-.capture{background:linear-gradient(160deg,#16A34A,#15803D);color:#fff;border-radius:24px;padding:40px;text-align:center;box-shadow:var(--shadow)}
-.capture h2{color:#fff;margin-top:0}
-.capture p{color:#D6F5E2;font-size:17px;margin:0 auto 22px;max-width:520px}
-.capform{display:flex;gap:10px;max-width:460px;margin:0 auto;flex-wrap:wrap;justify-content:center}
-.capform input{flex:1;min-width:200px;border:0;border-radius:13px;padding:14px 16px;font-size:16px}
-.capform button{background:#0B1220;color:#fff;border:0;border-radius:13px;padding:14px 22px;font-weight:700;font-size:16px;cursor:pointer}
-.capform button:hover{background:#11192b}
-.capmsg{margin-top:14px;font-weight:700;min-height:22px}
-
 /* FAQ */
 .faq{max-width:760px;margin:0 auto}
 .faq details{border:1px solid var(--line);border-radius:14px;padding:4px 20px;margin:12px 0;background:#fff}
